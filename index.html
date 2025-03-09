@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog de Cabelo - Dicas, tendências e cuidados para seus cabelos.">
+    <title>Blog de Cabelo</title>
+    <link rel="stylesheet" href="Blog.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.css' rel='stylesheet' />
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js'></script>
+</head>
+<body>
+    <header>
+        <h1>Blog de Cabelo</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li>
+                    <button aria-haspopup="true" aria-expanded="false" class="category-toggle">Categoria ▼</button>
+                    <ul class="category-menu" style="display: none;">
+                        <li><a href="https://dev-blogdecabelo.pantheonsite.io/category/shampoo/">Shampoo</a></li>
+                        <li><a href="https://dev-blogdecabelo.pantheonsite.io/category/beleza/">Beleza</a></li>
+                    </ul>
+                </li>
+                <li><a href="https://dev-blogdecabelo.pantheonsite.io/politica-de-privacidade/">Política de privacidade</a></li>
+            </ul>
+            <button aria-haspopup="dialog" aria-label="Abrir menu" class="menu-toggle" style="float: right;">☰</button>
+            <div class="menu-close" tabindex="-1"></div>
+            <form role="search" method="get" action="https://dev-blogdecabelo.pantheonsite.io/" class="search-form" style="display: inline-block;">
+                <input type="search" name="s" placeholder="Pesquisar..." style="width: 150px;">
+                <button type="submit" aria-label="Pesquisar" style="padding: 5px 10px;">🔍</button>
+            </form>
+        </nav>
+    </header>
+    <main>
+        <section id="inicio">
+            <div class="content">
+                <article>
+                    <h2>Dicas para Cuidar dos Cabelos</h2>
+                    <img src="https://blog.foreverliss.com.br/wp-content/uploads/2021/03/dicas-para-cuidar-do-cabelo-em-casa-1000x512.png" alt="Cuidados com cabelos">
+                    <p>Descubra as melhores práticas para manter seus cabelos saudáveis e bonitos.</p>
+                </article>
+                <article>
+                    <h2>Tendências de Cortes 2025</h2>
+                    <img src="https://patricinhaesperta.com.br/wp-content/uploads/2019/09/tendenciadecortes_62252057_2349849051963838_975535341282530006_n.jpg" alt="Tendências de cortes de cabelo">
+                    <p>Confira as tendências de cortes de cabelo que estão em alta este ano.</p>
+                </article>
+
+                <!-- Adicionando os file-box -->
+                <div class="file-box-container">
+                    <div class="file-box">
+                        <img src="https://st4allthings4p4ci.blob.core.windows.net/allthingshair/allthingshair/wp-content/uploads/sites/2/2023/01/19190512/rotina-de-cuidados-com-os-cabelos.jpg" alt="Rotina de cuidados com os cabelos">
+                        <h4>Rotina de Cuidados com os Cabelos</h4>
+                        <p>Descubra a melhor rotina para manter seus cabelos saudáveis e bonitos.</p>
+                    </div>
+                    <div class="file-box">
+                        <img src="https://exemplo.com/imagem2.jpg" alt="Tendências de Cortes 2025">
+                        <h4>Tendências de Cortes 2025</h4>
+                        <p>Confira as tendências de cortes de cabelo que estão em alta este ano.</p>
+                    </div>
+                    <div class="file-box">
+                        <img src="https://exemplo.com/imagem3.jpg" alt="Shampoo Ideal para Cabelos Cacheados">
+                        <h4>Shampoo Ideal para Cabelos Cacheados</h4>
+                        <p>Encontre o shampoo perfeito para cabelos cacheados e crespos.</p>
+                    </div>
+                </div>
+            </div>
+            <aside class="sidebar">
+                <!-- Mini Calendário -->
+                <div class="mini-calendar">
+                    <h3>Calendário</h3>
+                    <div id='calendar'></div>
+                </div>
+
+                <!-- Propaganda -->
+                <div class="ad-space">
+                    <h3>Propaganda</h3>
+                    <img src="https://cdn.e-konomista.pt/uploads/2020/03/cabelo-cuidado-casa.jpg" alt="Propaganda">
+                </div>
+
+                <!-- Artigos Recentes -->
+                <div class="file-box">
+                    <h3>Artigos Recentes</h3>
+                    <ul id="artigos-recentes">
+                        <!-- Artigos recentes serão carregados aqui via JavaScript -->
+                    </ul>
+                </div>
+            </aside>
+        </section>
+        <section id="sobre">
+            <h2>Sobre Nós</h2>
+            <p>O Blog de Cabelo é dedicado a trazer as melhores dicas e tendências para você cuidar dos seus cabelos.</p>
+        </section>
+        <section id="contato"></section>
+            <h2>Contato</h2>
+            <form id="contactForm">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Blog de Cabelo. Todos os direitos reservados.</p>
+    </footer>
+    <script src="Blog.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth'
+            });
+            calendar.render();
+        });
+    </script>
+</body>
+</html>
